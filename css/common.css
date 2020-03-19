@@ -1,0 +1,43 @@
+body {
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+li p {
+    margin: 0 !important;
+    margin-top: 0 !important;
+}
+
+.color-test1 {
+    /*background-color: wheat;*/
+    height: 50rem;
+}
+
+.color-test1>div {
+    text-align: center;
+    position: relative;
+    top: 20%;
+    font-family: 'Sawarabi Mincho', sans-serif;
+    font-size: 30px;
+}
+
+.color-test2 {
+    /*background-color: slategray;*/
+    height: 50rem;
+}
+
+.color-test2>div {
+    text-align: center;
+    position: relative;
+    top: 20%;
+}
+
+a.twitter-icon {
+    margin-top: 50px;
+    transition: all 0.3s ease 0s;
+    position: absolute;
+}
+
+.twitter-icon:hover {
+    fill: #5477aa;
+}
