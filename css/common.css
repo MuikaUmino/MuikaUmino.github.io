@@ -10,7 +10,7 @@ li p {
 
 .color-test1 {
     /*background-color: wheat;*/
-    height: 50rem;
+    height: 100%;
 }
 
 .color-test1>div {
@@ -23,21 +23,31 @@ li p {
 
 .color-test2 {
     /*background-color: slategray;*/
-    height: 50rem;
+    height: 100%;
 }
 
 .color-test2>div {
     text-align: center;
     position: relative;
     top: 20%;
+    margin-top: 30px;
 }
 
 a.twitter-icon {
     margin-top: 50px;
     transition: all 0.3s ease 0s;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .twitter-icon:hover {
     fill: #5477aa;
+}
+
+._pickup::after {
+    content: "←pickup!";
+    color: red;
+    font-size: 10px;
+    margin-left: 5px;
+    position: relative;
+    bottom: 2px;
 }
