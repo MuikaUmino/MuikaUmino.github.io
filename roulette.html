@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/roulette.css">
+    <script src="js/roulette.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form method="post" action="" class="form">
+            <div class="_input">
+                <input type="text" name="_name" placeholder="名前を入れる">
+                <input type="submit" name="send" value="SET">
+            </div>
+        </form>
+        <div class="_member">
+            <!----------phpで書いてるとこ全部jsに書き換える----------->
+            <?php 
+            if(isset($_POST['send'])){
+                echo 'test';
+            }
+            ?>
+        </div>
+    </div>
+</body>
+
+</html>
