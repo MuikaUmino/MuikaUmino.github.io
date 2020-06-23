@@ -1,0 +1,12 @@
+#canvas {
+    width: 800px;
+    height: 600px;
+    touch-action: none;
+}
+
+#start {
+    position: relative;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
