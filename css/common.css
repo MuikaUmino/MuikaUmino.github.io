@@ -9,7 +9,6 @@ li p {
 }
 
 .color-test1 {
-    /*background-color: wheat;*/
     height: 100%;
 }
 
@@ -22,7 +21,6 @@ li p {
 }
 
 .color-test2 {
-    /*background-color: slategray;*/
     height: 100%;
 }
 
@@ -36,7 +34,6 @@ li p {
 a.twitter-icon {
     margin-top: 50px;
     transition: all 0.3s ease 0s;
-    /*position: absolute;*/
 }
 
 .twitter-icon:hover {
@@ -61,4 +58,27 @@ a.twitter-icon {
 
 .container {
     margin-top: 70px;
+}
+
+.sp-only {
+    display: none;
+}
+
+.pc-only {
+    display: block;
+}
+
+@media screen and ( max-width:1024px) {
+    .pc-only {
+        display: none;
+    }
+    .sp-only {
+        display: block;
+    }
+    .dropdown-menu {
+        border: none;
+    }
+    .container {
+        margin-top: 100px;
+    }
 }

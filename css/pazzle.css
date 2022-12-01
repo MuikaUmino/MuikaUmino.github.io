@@ -1,12 +1,46 @@
-#canvas {
-    width: 800px;
-    height: 600px;
-    touch-action: none;
+.xslider_wrap {
+    display: flex;
+    overflow: hidden;
+    width: 50%;
+    margin-top: 50px;
+    /*box-shadow: 0 2px 5px #999;*/
 }
 
-#start {
-    position: relative;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+.xslider1,
+.xslider2 {
+    display: inline-flex;
+    flex: none;
+    animation: xslider 10s 2s linear infinite;
+}
+
+.xslider_wrap:hover div {
+    animation-play-state: paused!important;
+}
+
+.xslider1 div,
+.xslider2 div {
+    flex: none;
+    padding: 10px;
+}
+
+.xslider1 div:hover,
+.xslider2 div:hover {
+    transform: translateY(-5px);
+}
+
+@keyframes xslider {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.xslider1>div,
+.xslider2>div {
+    width: 50px;
+    height: 60px;
+    border: 1px solid #999;
+    margin: 10px 20px;
 }
