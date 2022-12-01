@@ -91,7 +91,6 @@ a._link {
 
 .card {
     margin-bottom: 20px;
-    s
 }
 
 .nav-item._twitter {
@@ -117,6 +116,10 @@ a._link {
 
 .navbar-toggler-icon {
     content: url("../images/bars-solid.svg");
+}
+
+.navbar a {
+    color: #fff;
 }
 
 .modal-footer {

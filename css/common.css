@@ -51,3 +51,14 @@ a.twitter-icon {
     position: relative;
     bottom: 2px;
 }
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    margin-top: 70px;
+}
