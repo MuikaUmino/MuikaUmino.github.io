@@ -11,20 +11,16 @@ body {
     font-family: "M PLUS Rounded 1c"
 }
 
-.navi-bar {
-    background-color: #323232;
-}
-
 a {
     text-decoration: none;
-    color: #fff;
+    color: #323232;
 }
 
-.btn-outline-success {
+/* .btn-outline-success {
     color: #fff;
     border-color: #fff;
 }
-
+ */
 .container {
     margin: 20px auto;
     /*
@@ -109,17 +105,13 @@ a._link {
     display: inline-block;
 }
 
-.navbar-toggler {
-    background-color: transparent;
-    border: 1px solid #000;
-}
-
-.navbar-toggler-icon {
-    content: url("../images/bars-solid.svg");
+.navbar-toggler-icon.navbar-toggler-icon--color {
+    background: url("../images/bars-solid.svg") no-repeat center;
+    color: #ffffff;
 }
 
 .navbar a {
-    color: #fff;
+    color: #323232;
 }
 
 .modal-footer {
@@ -127,7 +119,7 @@ a._link {
 }
 
 ._small {
-    font-size: 8px;
+    font-size: 0.8rem;
 }
 
 .no_link {
