@@ -1,116 +1,168 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    width: 100%;
-    h1,
-    h2,
-    h3,
-    h4 {
-        margin: 0;
+    line-height: 1;
+}
+
+/*-- common --*/
+
+section{
+    background-color: #474747;
+    font-family: "Zen Antique", serif;
+}
+.notice {
+    text-align: center;
+    font-size: 10px;
+    color: #f5f5f5;
+    margin: 10px auto;
+    line-height: 1.5;
+}
+h2{
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/*-- --*/
+.header{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    text-align: center;
+    padding: 40px 0;
+    color: #ffffff;
+    h1 {
+        font-weight: normal;
     }
-    h2 {
-        font-size: 2em;
+}
+
+/*-- illust --*/
+
+.illust{
+    display: block;
+    margin: auto;
+    background-color: #f5f5f5;
+    padding: 10px 0 20px;
+    &__wrap {
+        display: flex;
+        overflow-x: auto;
+        max-width: 640px;
+        padding: 0;
+        margin: auto;
+        list-style: none;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        }
+    &__item {
+        flex: 0 0 auto; 
+        width: 200px; 
+        margin-right: 10px; 
+        align-self: center;
+        }
+    &__img {
+        height: 270px;
+        width: 100%;
+        object-fit: contain;
+        }
+    &__detail {
+        margin-top: 10px;
+        font-size: 12px;
     }
-    figure {
-        display: block;
-        text-align: center;
-        border-radius: 50%;
+}
+
+/*-- 価格表 --*/
+
+.price-list{
+    background-color: #474747;
+    padding: 50px 100px;
+    & h2{
+        color: #ffffff;
+    }
+    &__table{
+        font-family: "Kiwi Maru", serif;
+        background-color: #f5f5f5;
         margin: 20px auto 0;
-        overflow: hidden;
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border: 1px solid #4f4f4f;
-        img {
-            width: 100%;
-            height: 100%;
-        }
+        padding: 10px;
+        border-radius: 10px;
+        max-width: 640px;
+        min-width: 270px;
     }
-    ._top {
-        width: 100%;
-        background-color: #2f2f2f;
-        display: block;
-        margin: 0;
-        padding: 100px 0;
-        height: 800px;
-        z-index: -2;
+    &__flex{
         position: relative;
-        .headerWord {
-            display: block;
+        display: flex;
+        justify-content: space-around;
+        &:nth-child(n + 2){
+            margin-top: 10px;
         }
-        h2 {
-            position: relative;
-            font-size: 4em;
-            display: block;
-            width: fit-content;
-            color: #2f2f2f;
-            margin: 0 0 0 1em;
-        }
-        h2::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 1em;
-            background-color: #efefef;
-            top: 10px;
-            left: 0;
-            animation: feadin 2s;
-            z-index: -1;
-        }
-        @keyframes feadin {
-            from {
-                opacity: 0;
-                width: 0;
+        & dt {
+            line-height: 1.3;
+            text-align: center;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 3rem;
+                height: 1px;
+                background-color: #474747;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%); 
             }
-            to {
-                opacity: 1;
-                background-color: #efefef;
-            }
-        } //keyframes
-    } //top
-    ._top::after {
-        position: absolute;
-        content: "";
-        border-top: 50px solid #2f2f2f;
-        border-right: 50px solid transparent;
-        border-left: 50px solid transparent;
+        }
     }
-    ._mid {
-        text-align: center;
+    /*-- sp size --*/
+    @media screen and (max-width:639px) {
+        padding:100px 10px;
+        overflow-x: scroll;
+        &__table {
+            font-size: 12px;
+        }
+        &__flex {
+            justify-content: space-between;
+            & dt{
+                text-align: left;
+            }
+        }
+    }
+}
+
+/*-- SNS 連絡先 --*/
+.contact {
+    background-color: #f5f5f5;
+    padding: 30px 0 100px;
+    &__icon-wrap {
+        display: inline-flex;
+        justify-content: center;
+        margin: auto;
+        gap: 20px;
         width: 100%;
-        margin-top: 50px;
-        .step_wrap {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-        }
-        .step1,
-        .step2,
-        .step3 {
-            display: block;
-            width: calc(100% / 3.5);
-            height: 300px;
-            p {
-                margin-top: 20px;
-            }
-        } //step1~3
-        ._wrap {
-            display: block;
-            margin-top: 100px;
-            figure {
-                width: 300px;
-                height: 300px;
-            }
-            ._small {
-                font-size: 14px;
-            }
-        } //_wrap
-    } //_mid
-    ._owari {
+        margin-top: 20px;
+    }
+    &__icon {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 12px;
         text-align: center;
-        margin: 150px auto 300px;
-        ._end {
-            margin-top: 80px;
+        font-family: "Kiwi Maru", serif;
+        & i {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+        & a {
+            color: #000000;
+            &:hover {
+                opacity: 0.4;
+                transition: 0.3s;
+            }
         }
     }
-} //body
+}
+
+/*-- font awesome --*/
+.x-icon {}
+.file-icon {}
+.common-icon {}
+.mail-icon {}
